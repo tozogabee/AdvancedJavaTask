@@ -10,7 +10,7 @@ public class HumanCustomer implements Customer{
     private final int age;
 
     public HumanCustomer() {
-        this.age = new Random().nextInt(56) + 12; // 12–67
+        this.age = new Random().nextInt(89) + 12;
     }
 
     @ShoppingListValidator
@@ -19,7 +19,6 @@ public class HumanCustomer implements Customer{
             return true;
         }
 
-        // Check for alcohol
         return categories.stream().noneMatch(cat -> cat == ItemCategory.ALCOHOL);
     }
 

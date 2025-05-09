@@ -1,11 +1,10 @@
-package org.example.shopping;
+package org.example;
 
 import org.example.shopping.customer.Customer;
 import org.example.shopping.customer.HumanCustomer;
 import org.example.shopping.customer.NonRestrictedCustomer;
 import org.example.shopping.customer.RetailCustomer;
 import org.example.shopping.item.Item;
-import org.example.shopping.item.ItemCategory;
 import org.example.shopping.shop.Shop;
 
 import java.util.Map;
@@ -27,9 +26,8 @@ public class Shopping {
                     shop.tryToBuy(shoppingList, customer);
                 });
             }
-
             executor.shutdown();
-        } // 10 szál egyszerre
+        }
     }
 
     private static Customer generateRandomCustomer() {

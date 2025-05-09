@@ -18,8 +18,6 @@ public class ReaderUtil {
         return new Item(name, ItemCategory.valueOf(itemName.toUpperCase()));
     }
 
-    //parsePair(BiFunction<A,B,C>, Function<D,E>)
-
     public static <A, B, C, D, E> TriFunction<A, B, C, Pair<D, E>> parsePair(
             BiFunction<A, B, D> biFunction,
             Function<C, E> function
@@ -35,8 +33,8 @@ public class ReaderUtil {
         String[] split = line.split(",");
 
         return parsePair(
-                ReaderUtil::readItem,   // BiFunction<String, String, Item>
-                ReaderUtil::readPrice   // Function<String, Double>
+                ReaderUtil::readItem,
+                ReaderUtil::readPrice
         ).apply(split[0], split[1], split[2]);
     }
 
