@@ -10,7 +10,7 @@ public class RetailCustomer implements Customer {
     private final double budget;
 
     public RetailCustomer() {
-        this.budget = new Random().nextInt(901) + 100; // 100–1000
+        this.budget = new Random().nextInt(1) + 1000;
     }
 
     @ShoppingListValidator

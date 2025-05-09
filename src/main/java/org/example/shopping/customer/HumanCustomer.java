@@ -10,7 +10,7 @@ public class HumanCustomer implements Customer{
     private final int age;
 
     public HumanCustomer() {
-        this.age = new Random().nextInt(89) + 12;
+        this.age = new Random().nextInt(83) + 18;
     }
 
     @ShoppingListValidator
